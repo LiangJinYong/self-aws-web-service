@@ -3,3 +3,13 @@
 .idea
 
 application-oauth.properties
+
+build/classes/
+build/generated/
+build/reports/
+build/resources/main/application.properties
+build/resources/main/static/
+build/resources/main/templates/
+                     build/resources/test/
+build/test-results/
+build/tmp/
