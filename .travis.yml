@@ -14,11 +14,6 @@ cache:
 
 script: "./gradlew clean build"
 
-before_deploy:
-    - zip -r self-aws-web-service *
-    - mkdir -p deploy
-    - mv self-aws-web-service.zip deploy/self-aws-web-service.zip
-
 # CI 실행완료시 메일로 알림
 notifications:
     email:
