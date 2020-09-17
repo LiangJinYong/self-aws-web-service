@@ -14,6 +14,12 @@ cache:
 
 script: "./gradlew clean build"
 
+# CI 실행완료시 메일로 알림
+notifications:
+    email:
+        recipients:
+            liangjy881@naver.com
+
 before_deploy:
     - zip -r freelec-springboot2-webservice *
     - mkdir -p deploy
@@ -30,8 +36,4 @@ deploy:
     load_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
      
-# CI 실행완료시 메일로 알림
-notifications:
-    email:
-        recipients:
-            liangjy881@naver.com
+
