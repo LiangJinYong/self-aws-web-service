@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-echo "****"
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
-echo "before profile.sh"
 source ${ABSDIR}/profile.sh
-echo "after profile.sh"
 
 IDLE_PORT=$(find_idle_port)
 
